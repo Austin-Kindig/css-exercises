@@ -9,9 +9,28 @@ body {
 }
 
 .header {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.left-header, .right-header {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+  display: flex;
+  justify-content: space-between;
+  flex: 1 1 auto;
+  padding: 8px;
+}
+
+.left-header {
+  justify-content: left;
+}
+
+.right-header {
+  justify-content: right;
+  gap: 16px;
+  align-items: center;
 }
 
 .profile-image {
@@ -27,7 +46,24 @@ body {
   font-size: 32px;
   font-weight: 900;
   font-style: italic;
+  align-self: center;
+  margin-right: -30px;
 }
+
+.links {
+  flex-direction: row;
+  display: flex;
+  gap: 16px;
+}
+ .header.left {
+   display: flex;
+   justify-self: flex-start;
+ }
+
+ .header .right {
+   display: flex;
+   justify-content: right;
+ }
 
 button {
   border: none;
